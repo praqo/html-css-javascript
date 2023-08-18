@@ -1,0 +1,22 @@
+{
+  "name": "learn-japanese",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/styles.scss css/styles.css --output-style compressed"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/praqo/learn-japanese.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/praqo/learn-japanese/issues"
+  },
+  "homepage": "https://github.com/praqo/learn-japanese#readme",
+  "dependencies": {
+    "node-sass": "^7.0.0"
+  }
+}
