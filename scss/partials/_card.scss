@@ -1,0 +1,35 @@
+.flash-card__container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.flash-card {
+  width: 50%;
+  padding: 10px;
+}
+
+.flash-card__header {
+  cursor: pointer;
+}
+
+.flash-card__header-title {
+  font-size: 18px;
+}
+
+.flash-card__body {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.flash-card__content:not(.show-content) {
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .flash-card {
+    width: 100%;
+    padding: 0;
+  }
+}

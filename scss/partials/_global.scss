@@ -1,3 +1,17 @@
-body {
-  background-color: lightcoral;
+* {
+  box-sizing: border-box;
+}
+
+.body-tag {
+  font-family: sans-serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: #333;
+  background-color: #fff;
+}
+
+.app-container {
+  max-width: 1201px;
+  margin: 0 auto;
+  position: relative;
 }
