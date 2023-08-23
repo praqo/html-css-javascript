@@ -38,9 +38,9 @@
       flashCardHeader.setAttribute("data-flash-card-parent", iterationCounter);
       flashCardHeader.innerHTML = `
     <h5 class="flash-card__header-title">
-    ${VOCAB_DATA[i]["Opt-Sen-Index"]} ${VOCAB_DATA[i]["Vocab-furigana"]} (${VOCAB_DATA[i]["Vocab-meaning"]})
-     
+    ${VOCAB_DATA[i]["Opt-Sen-Index"]} ${VOCAB_DATA[i]["Vocab-furigana"]} (${VOCAB_DATA[i]["Vocab-meaning"]})  
   </h5>
+     <a href="https://forvo.com/search/${VOCAB_DATA[i]["Vocab-expression"]}" target="_blank" class="flash-card__header-link" title="open forvo word page">🔗</a>
     `;
       elementToAppend.innerHTML = `
 
