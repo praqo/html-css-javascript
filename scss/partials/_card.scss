@@ -10,6 +10,13 @@
 
 .flash-card__header {
   cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.flash-card__header-link {
+  text-decoration: none;
+  padding: 0 0 0 6px;
 }
 
 .flash-card__header-title {
