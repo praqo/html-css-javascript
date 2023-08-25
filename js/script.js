@@ -16,6 +16,7 @@
   let wordTotal = 0;
   let paginationArr = [];
   let paginationCount = 0;
+  const filterByDataPropery = "Core-index";
 
   function toggleContent(e) {
     const TARGET_ELEMENT = e.currentTarget;
@@ -38,7 +39,7 @@
       flashCardHeader.setAttribute("data-flash-card-parent", iterationCounter);
       flashCardHeader.innerHTML = `
     <h5 class="flash-card__header-title">
-    ${VOCAB_DATA[i]["Opt-Sen-Index"]} ${VOCAB_DATA[i]["Vocab-furigana"]} (${VOCAB_DATA[i]["Vocab-meaning"]})  
+    ${VOCAB_DATA[i][filterByDataPropery]} ${VOCAB_DATA[i]["Vocab-furigana"]} (${VOCAB_DATA[i]["Vocab-meaning"]})  
   </h5>
      <a href="https://forvo.com/search/${VOCAB_DATA[i]["Vocab-expression"]}" target="_blank" class="flash-card__header-link" title="open forvo word page">🔗</a>
     `;
@@ -189,6 +190,26 @@
     }
     return comparison * -1;
   }
+
+  function sortData(typesort, arr) {
+    function compare(a, b) {
+      const bandA = a[typesort];
+      const bandB = b[typesort];
+
+      let comparison = 0;
+      if (bandA > bandB) {
+        comparison = 1;
+      } else if (bandA < bandB) {
+        comparison = -1;
+      }
+      return comparison;
+    }
+
+    arr = arr.sort(compare);
+  }
+
+  sortData(filterByDataPropery, VOCAB_DATA);
+
   populatePaginationButtons();
 
   populatePage();
